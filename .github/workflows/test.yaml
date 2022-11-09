@@ -12,7 +12,6 @@ jobs:
         run: |
           node -v
           npm -v
-    steps:
       - name: py cmds
         run: |
           import platform
