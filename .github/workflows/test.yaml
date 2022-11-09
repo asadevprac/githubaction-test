@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: check echo string
-        run: echoo "hello asasri"
+        run: echo "hello asasri"
       - name: checking multiline 
         run: |
           node -v
