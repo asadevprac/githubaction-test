@@ -5,6 +5,7 @@ on: [push]
 jobs:
   run-shell-cmds:
     runs-on: ubuntu-latest
+    needs: ["run-powershell-cmds"]
     steps:
       - name: check echo string
         run: echo "hello asasri"
@@ -20,7 +21,6 @@ jobs:
         shell: python   
   run-powershell-cmds:
     runs-on: windows-latest
-    needs: ["run-shell-cmds"]
     steps:
       - name: directory of powershell 
         run: Get-Location
