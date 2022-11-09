@@ -1,0 +1,14 @@
+name: shell cmds
+
+on: [push]
+
+jobs:
+  run-shell-cmds:
+    runs-on: ubuntu-latest
+    steps:
+      - name: check echo string
+        run: echo "hello asasri"
+      - name: checking multiline 
+        run: |
+          node -v
+          npm -v
