@@ -1,7 +1,10 @@
 name: sample test action workflow
 
-on: [push]
-
+on: 
+  push:
+  pull_request: 
+    types: [opened, closed, reopened]
+    
 jobs:
   run-github-action:
     runs-on: ubuntu-latest
