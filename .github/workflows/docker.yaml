@@ -23,7 +23,11 @@ jobs:
       - name: check files
         run: ls -a
       - name: set permissions
-        run: chmod +x ./script.sh    
+        uses: docker://node:18-alpine3.16
+        with:
+          entrypoint: /usr/local/bin/run
+          args: chmod +x ./script.sh 
+             
       - name: Using script
         uses: docker://node:18-alpine3.16
         with:
