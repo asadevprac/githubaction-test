@@ -23,7 +23,7 @@ jobs:
       - name: check files
         run: ls
       - name: set permissions
-        run: chmod +x script.sh    
+        run: chmod +x .github/workflows/script.sh    
       - name: Using script
         uses: docker://node:18-alpine3.16
         with:
