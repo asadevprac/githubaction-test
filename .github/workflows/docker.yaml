@@ -20,6 +20,8 @@ jobs:
           entrypoint: /usr/local/bin/node
           args: -v 
       - uses: actions/checkout@v1
+      - name: check files
+        run: ls
       - name: set permissions
         run: chmod +x script.sh    
       - name: Using script
