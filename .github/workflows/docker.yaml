@@ -8,7 +8,7 @@ jobs:
       image: node:19-alpine3.16
     steps:
       - name: log the container 
-        run: node node-v 
+        run: node -v 
       - name: steps within docker 
         uses: docker://node:18-alpine3.16
         with:
