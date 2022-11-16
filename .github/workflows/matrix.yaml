@@ -1,0 +1,20 @@
+name: matrix check
+
+on: push
+
+jobs:
+  node-version:
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest, windows-latest]
+        node-version: [6, 8, 10]
+    runs-on: ${{matrix.os}}
+    steps:
+      - name: check node_version
+        run: node-v
+      - uses: actions/step-node@v1
+        with:
+          node-version: ${{matrix.node_version}}
+
+      - name: log node version
+        run: node-v    
