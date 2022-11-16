@@ -11,10 +11,10 @@ jobs:
     runs-on: ${{matrix.os}}
     steps:
       - name: check node_version
-        run: node-v
+        run: node -v
       - uses: actions/setup-node@v1
         with:
           node-version: ${{matrix.node-version}}
 
       - name: log node version
-        run: node-v    
+        run: node -v    
