@@ -1,3 +1,3 @@
 #!/bin/sh
-echo $31
+echo $1
 echo "Hello Asasri"
