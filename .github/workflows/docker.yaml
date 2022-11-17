@@ -24,7 +24,8 @@ jobs:
         run: ls -a
       - name: set permissions
         run: | 
-          cd .github/workflows
+          cd .github/workflows/
+          ls -a
           chmod +x script.sh
              
       - name: Using script
