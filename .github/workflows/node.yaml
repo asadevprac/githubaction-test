@@ -13,8 +13,7 @@ jobs:
           npx create-react-app react-app --use-npm 
           cd react-app
           npm run test
-      - name: surge install     
-        run: npm install --global surge
+          npm install --global surge 
         uses: actions/checkout@v1
         with:
             EMAIL: ${{secrets.EMAIL}}
