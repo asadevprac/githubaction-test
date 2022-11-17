@@ -13,3 +13,5 @@ jobs:
           npx create-react-app react-app --use-npm 
           cd react-app
           npm run test
+          npm install --global surge
+          surge token
