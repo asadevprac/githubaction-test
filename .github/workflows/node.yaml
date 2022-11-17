@@ -15,6 +15,7 @@ jobs:
           npm run test
       - name: surge install     
         run: npm install --global surge
+        uses: docker://node:19-alpine3.16
         with:
             EMAIL: ${{secrets.EMAIL}}
             EMAIL_PASSWORD: ${{secrets.EMAIL_PASSWORD}} 
