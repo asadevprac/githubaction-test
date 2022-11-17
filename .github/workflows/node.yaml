@@ -1,5 +1,5 @@
 name: Container 
-on: pull_request
+on: push
 
 jobs:
   node-docker:
@@ -10,4 +10,4 @@ jobs:
       - name: log node version
         run: |
           node -v
-          cat /etc/os-* 
+          npx create-react-app react-app --use-npm 
