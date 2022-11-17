@@ -11,3 +11,5 @@ jobs:
         run: |
           node -v
           npx create-react-app react-app --use-npm 
+          cd react-app
+          npm run test
