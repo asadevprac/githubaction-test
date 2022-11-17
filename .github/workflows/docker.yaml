@@ -28,11 +28,12 @@ jobs:
           ls -a
           chmod +x Script.sh
           ls -lathr
-        with:
-          entrypoint: ./Script.sh
-          args: "some string"         
-      
              
+      - name: Using script
+        uses: docker://node:18-alpine3.16
+        with:
+          entrypoint: .github/workflows/Script.sh
+          args: "some string"          
   node-docker:
     runs-on: ubuntu-latest
     services:
