@@ -14,4 +14,7 @@ jobs:
           cd react-app
           npm run test
           npm install --global surge
+          with:
+            EMAIL: ${{secrets.EMAIL}}
+            EMAIL_PASSWORD: ${{secrets.EMAIL_PASSWORD}} 
           surge token
