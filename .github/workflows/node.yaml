@@ -14,9 +14,9 @@ jobs:
           cd react-app
           npm run test
       - name: surge install     
-          npm install --global surge
+        run: npm install --global surge
         with:
             EMAIL: ${{secrets.EMAIL}}
             EMAIL_PASSWORD: ${{secrets.EMAIL_PASSWORD}} 
       - name: display surge token
-          surge token
+        run: surge token
