@@ -13,8 +13,7 @@ jobs:
           npx create-react-app react-app --use-npm 
           cd react-app
           npm run test
-          npm install --global surge
-        with:     
+          npm install --global surge    
           email: ${{secrets.EMAIL}}
           password: ${{secrets.EMAIL_PASSWORD}} 
            surge token
