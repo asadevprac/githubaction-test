@@ -15,6 +15,6 @@ jobs:
           npm run test
           npm install --global surge   
         with:
-            EMAIL: ${{secrets.EMAIL}}
-            EMAIL_PASSWORD: ${{secrets.EMAIL_PASSWORD}} 
+          EMAIL: ${{secrets.EMAIL}}
+          EMAIL_PASSWORD: ${{secrets.EMAIL_PASSWORD}} 
               surge token
