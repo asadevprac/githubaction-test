@@ -18,4 +18,5 @@ jobs:
         with:
             EMAIL: ${{secrets.EMAIL}}
             EMAIL_PASSWORD: ${{secrets.EMAIL_PASSWORD}} 
-              surge token
+      - name: display surge token
+          surge token
