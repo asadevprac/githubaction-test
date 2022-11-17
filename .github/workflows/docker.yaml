@@ -26,7 +26,7 @@ jobs:
         run: | 
           cd .github/workflows/
           ls -a
-          chmod +x script.sh
+          chmod +x Script.sh
              
       - name: Using script
         uses: docker://node:18-alpine3.16
