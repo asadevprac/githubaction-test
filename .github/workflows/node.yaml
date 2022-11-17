@@ -8,15 +8,13 @@ jobs:
       image: node:19-alpine3.16
     steps:
       - name: log node version
-        env:
-          EMAIL: only
-          EMAIL_PASSWORD: only
         run: |
           node -v
           npx create-react-app react-app --use-npm 
           cd react-app
           npm run test
-          npm install --global surge   
-          EMAIL: ${{secrets.EMAIL}}
-          EMAIL_PASSWORD: ${{secrets.EMAIL_PASSWORD}} 
-          surge token
+          npm install --global surge
+        with:     
+          email: ${{secrets.EMAIL}}
+          password: ${{secrets.EMAIL_PASSWORD}} 
+           surge token
